@@ -44,7 +44,7 @@ function App() {
         const unvisited = [rootNodeId]
         while(unvisited.length !== 0) {
             const id = unvisited.pop()
-            connectedNodeIds.add(id);
+            connectedNodeIds.add(id)
             (connections[id] || []).forEach((connectedId) => { 
                 unvisited.push(connectedId) 
             })
