@@ -4,7 +4,8 @@ import { Stage, Layer } from 'react-konva';
 import Connection from './Connection'
 import { Node } from './Node';
 
-// TODO: how do I stop all the nodes from rerendering when I mouseover just one?
+// TODO: remove drag and drop
+// TODO: Find a good visual design for architecture graphs like this and implement it
 
 const connections = {
     "abc": ["def"],
@@ -32,6 +33,8 @@ function App() {
         "g": { x: 300, y: 300 }
     })
     const [highlightedNodeIds, setHighlightedNodeIds] = useState(new Set())
+
+    // console.log(nodes["g"])
     return (
         <div className="App">
             <Stage width={window.innerWidth} height={window.innerHeight}>
